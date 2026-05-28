@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Experimentos de Energía Mecánica</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#f5f7fb;
+color:#1e293b;
+}
+
+/* HEADER */
+
+header{
+height:100vh;
+
+background:
+linear-gradient(rgba(15,23,42,0.8),rgba(37,99,235,0.7)),
+url('https://images.unsplash.com/photo-1532187643603-ba119ca4109e?q=80&w=1974&auto=format&fit=crop');
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+
+color:white;
+padding:20px;
+}
+
+header h1{
+font-size:90px;
+margin-bottom:20px;
+}
+
+header p{
+font-size:28px;
+margin-bottom:40px;
+}
+
+.btn{
+display:inline-block;
+padding:16px 35px;
+background:#2563eb;
+border-radius:12px;
+text-decoration:none;
+color:white;
+font-weight:600;
+transition:0.3s;
+}
+
+.btn:hover{
+background:#1d4ed8;
+transform:scale(1.05);
+}
+
+/* NAVBAR */
+
+nav{
+position:sticky;
+top:0;
+z-index:1000;
+
+background:#0f172a;
+
+padding:18px;
+text-align:center;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:0 18px;
+font-weight:500;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#60a5fa;
+}
+
+/* GENERAL */
+
+section{
+padding:100px 10%;
+}
+
+.container{
+max-width:1300px;
+margin:auto;
+}
+
+h2{
+text-align:center;
+font-size:52px;
+margin-bottom:50px;
+color:#1e3a8a;
+}
+
+p{
+font-size:19px;
+line-height:1.8;
+}
+
+/* INTRO */
+
+.intro{
+text-align:center;
+}
+
+/* GRID */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:35px;
+}
+
+/* CARD */
+
+.card{
+background:white;
+border-radius:25px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card img{
+width:100%;
+height:250px;
+object-fit:cover;
+}
+
+.card-content{
+padding:30px;
+}
+
+.card h3{
+font-size:30px;
+margin-bottom:15px;
+color:#1e3a8a;
+}
+
+.card ul{
+margin-top:20px;
+padding-left:20px;
+}
+
+.card li{
+margin:10px 0;
+}
+
+/* BLUE SECTION */
+
+.blue{
+background:#dbeafe;
+}
+
+/* DARK SECTION */
+
+.dark{
+background:#0f172a;
+color:white;
+}
+
+.dark h2{
+color:white;
+}
+
+.dark .card{
+background:#1e293b;
+}
+
+/* FORMULAS */
+
+.formulas{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.formula{
+background:white;
+padding:30px;
+border-radius:20px;
+text-align:center;
+font-size:28px;
+font-weight:600;
+box-shadow:0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* GALLERY */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.gallery img{
+width:100%;
+height:320px;
+object-fit:cover;
+border-radius:20px;
+transition:0.3s;
+}
+
+.gallery img:hover{
+transform:scale(1.03);
+}
+
+/* FOOTER */
+
+footer{
+background:#020617;
+color:white;
+text-align:center;
+padding:60px 20px;
+}
+
+footer h3{
+font-size:32px;
+margin-bottom:15px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+header h1{
+font-size:55px;
+}
+
+header p{
+font-size:20px;
+}
+
+h2{
+font-size:38px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<div>
+
+<h1>
+ENERGÍA MECÁNICA
+</h1>
+
+<p>
+Transformación y conservación de la energía mediante sistemas físicos
+</p>
+
+<a href="#experimentos" class="btn">
+Ver Experimentos
+</a>
+
+</div>
+
+</header>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<a href="#intro">Introducción</a>
+<a href="#energia">Energía Mecánica</a>
+<a href="#experimentos">Experimentos</a>
+<a href="#fenomenos">Fenómenos</a>
+<a href="#formulas">Fórmulas</a>
+<a href="#galeria">Galería</a>
+
+</nav>
+
+<!-- INTRO -->
+
+<section id="intro">
+
+<div class="container intro">
+
+<h2>
+¿Qué es la energía mecánica?
+</h2>
+
+<p>
+
+La energía mecánica corresponde a la suma entre la energía potencial y la energía cinética.
+Esta energía se encuentra presente en fenómenos relacionados con movimiento, gravedad,
+elasticidad, velocidad y conservación de energía.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ENERGIA -->
+
+<section id="energia" class="blue">
+
+<div class="container">
+
+<h2>
+Uso de la energía mecánica
+</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<div class="card-content">
+
+<h3>
+Movimiento
+</h3>
+
+<p>
+La energía mecánica permite generar desplazamiento y velocidad en sistemas físicos.
+</p>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="card-content">
+
+<h3>
+Transformación
+</h3>
+
+<p>
+La energía cambia constantemente entre energía potencial, cinética y elástica.
+</p>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="card-content">
+
+<h3>
+Conservación
+</h3>
+
+<p>
+La energía no desaparece; únicamente se transforma entre diferentes formas.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- EXPERIMENTOS -->
+
+<section id="experimentos">
+
+<div class="container">
+
+<h2>
+Experimentos
+</h2>
+
+<div class="grid">
+
+<!-- CARRO -->
+
+<div class="card">
+
+<img src="file:///C:/Users/varga/Downloads/carro.jpeg">
+
+<div class="card-content">
+
+<h3>
+🚗 Carro por Rampa
+</h3>
+
+<p>
+Transformación de energía potencial gravitacional en energía cinética mediante una rampa inclinada.
+</p>
+
+<ul>
+
+<li>Energía potencial gravitacional</li>
+<li>Energía cinética</li>
+<li>Aceleración</li>
+<li>Movimiento rectilíneo</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<!-- CATAPULTA -->
+
+<div class="card">
+
+<img src="file:///C:/Users/varga/Downloads/catapulta.jpeg">
+
+<div class="card-content">
+
+<h3>
+🏹 Catapulta Elástica
+</h3>
+
+<p>
+Uso de energía potencial elástica para impulsar proyectiles mediante bandas elásticas.
+</p>
+
+<ul>
+
+<li>Energía elástica</li>
+<li>Impulso</li>
+<li>Movimiento parabólico</li>
+<li>Elasticidad</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<!-- PENDULO -->
+
+<div class="card">
+
+<img src="file:///C:/Users/varga/Downloads/pendulo.jpeg">
+
+<div class="card-content">
+
+<h3>
+⏱️ Péndulo Mecánico
+</h3>
+
+<p>
+Intercambio constante entre energía potencial gravitacional y energía cinética.
+</p>
+
+<ul>
+
+<li>Oscilación</li>
+<li>Conservación de energía</li>
+<li>Movimiento periódico</li>
+<li>Gravedad</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FENOMENOS -->
+
+<section id="fenomenos" class="dark">
+
+<div class="container">
+
+<h2>
+Fenómenos físicos observados
+</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<div class="card-content">
+
+<h3>
+Fricción
+</h3>
+
+<p>
+Parte de la energía se pierde debido al contacto entre superficies.
+</p>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="card-content">
+
+<h3>
+Elasticidad
+</h3>
+
+<p>
+Los materiales almacenan energía y posteriormente la liberan.
+</p>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="card-content">
+
+<h3>
+Gravedad
+</h3>
+
+<p>
+La gravedad transforma energía potencial en energía cinética.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FORMULAS -->
+
+<section id="formulas">
+
+<div class="container">
+
+<h2>
+Fórmulas utilizadas
+</h2>
+
+<div class="formulas">
+
+<div class="formula">
+Ec = 1/2 mv²
+</div>
+
+<div class="formula">
+Ep = mgh
+</div>
+
+<div class="formula">
+Ee = 1/2 kx²
+</div>
+
+<div class="formula">
+Em = Ec + Ep
+</div>
+
+<div class="formula">
+v = d/t
+</div>
+
+<div class="formula">
+T = 2π√(L/g)
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- GALERIA -->
+
+<section id="galeria" class="blue">
+
+<div class="container">
+
+<h2>
+Galería del proyecto
+</h2>
+
+<div class="gallery">
+
+<img src="file:///C:/Users/varga/Downloads/carro.jpeg">
+
+<img src="file:///C:/Users/varga/Downloads/catapulta.jpeg">
+
+<img src="file:///C:/Users/varga/Downloads/pendulo.jpeg">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<h3>
+Universidad Distrital Francisco José de Caldas
+</h3>
+
+<p>
+Proyecto Experimental de Física
+</p>
+
+<p>
+Energía Mecánica y Conservación de la Energía
+</p>
+
+</footer>
+
+</body>
+
+</html>
+```

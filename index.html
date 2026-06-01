@@ -1,183 +1,395 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Experimentos de Energía Mecánica</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#f5f7fb;
+color:#1e293b;
+}
+
+/* HEADER */
+
+header{
+height:100vh;
+
+background:
+linear-gradient(rgba(15,23,42,0.8),rgba(37,99,235,0.7)),
+url('https://images.unsplash.com/photo-1532187643603-ba119ca4109e?q=80&w=1974&auto=format&fit=crop');
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+
+color:white;
+padding:20px;
+}
+
+header h1{
+font-size:90px;
+margin-bottom:20px;
+}
+
+header p{
+font-size:28px;
+margin-bottom:40px;
+}
+
+.btn{
+display:inline-block;
+padding:16px 35px;
+background:#2563eb;
+border-radius:12px;
+text-decoration:none;
+color:white;
+font-weight:600;
+transition:0.3s;
+}
+
+.btn:hover{
+background:#1d4ed8;
+transform:scale(1.05);
+}
+
+/* NAVBAR */
+
+nav{
+position:sticky;
+top:0;
+z-index:1000;
+
+background:#0f172a;
+
+padding:18px;
+text-align:center;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:0 18px;
+font-weight:500;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#60a5fa;
+}
+
+/* GENERAL */
+
+section{
+padding:100px 10%;
+}
+
+.container{
+max-width:1300px;
+margin:auto;
+}
+
+h2{
+text-align:center;
+font-size:52px;
+margin-bottom:50px;
+color:#1e3a8a;
+}
+
+p{
+font-size:19px;
+line-height:1.8;
+}
+
+/* INTRO */
+
+.intro{
+text-align:center;
+}
+
+/* GRID */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:35px;
+}
+
+/* CARD */
+
+.card{
+background:white;
+border-radius:25px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card img{
+width:100%;
+height:250px;
+object-fit:cover;
+}
+
+.card-content{
+padding:30px;
+}
+
+.card h3{
+font-size:30px;
+margin-bottom:15px;
+color:#1e3a8a;
+}
+
+.card ul{
+margin-top:20px;
+padding-left:20px;
+}
+
+.card li{
+margin:10px 0;
+}
+
+/* BLUE SECTION */
+
+.blue{
+background:#dbeafe;
+}
+
+/* DARK SECTION */
+
+.dark{
+background:#0f172a;
+color:white;
+}
+
+.dark h2{
+color:white;
+}
+
+.dark .card{
+background:#1e293b;
+}
+
+/* FORMULAS */
+
+.formulas{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.formula{
+background:white;
+padding:30px;
+border-radius:20px;
+text-align:center;
+font-size:28px;
+font-weight:600;
+box-shadow:0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* GALLERY */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.gallery img{
+width:100%;
+height:320px;
+object-fit:cover;
+border-radius:20px;
+transition:0.3s;
+}
+
+.gallery img:hover{
+transform:scale(1.03);
+}
+
+/* FOOTER */
+
+footer{
+background:#020617;
+color:white;
+text-align:center;
+padding:60px 20px;
+}
+
+footer h3{
+font-size:32px;
+margin-bottom:15px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+header h1{
+font-size:55px;
+}
+
+header p{
+font-size:20px;
+}
+
+h2{
+font-size:38px;
+}
+
+}
+
+</style>
+
+</head>
+
 <body>
 
-<!-- PORTADA -->
+<!-- HEADER -->
 
 <header>
+
 <div>
-<h1>ENERGÍA MECÁNICA</h1>
+
+<h1>
+ENERGÍA MECÁNICA
+</h1>
+
 <p>
-Aprendiendo física mediante preguntas, exploración y experimentación
+Transformación y conservación de la energía mediante sistemas físicos
 </p>
-<a href="#cotidiano" class="btn">
-Comenzar Exploración
+
+<a href="#experimentos" class="btn">
+Ver Experimentos
 </a>
+
 </div>
+
 </header>
 
-<!-- MENÚ -->
+<!-- NAVBAR -->
 
 <nav>
-<a href="#cotidiano">Situaciones</a>
-<a href="#preguntas">Preguntas</a>
-<a href="#concepto">Concepto</a>
-<a href="#carro">Carro</a>
-<a href="#catapulta">Catapulta</a>
-<a href="#pendulo">Péndulo</a>
-<a href="#conexion">Relación</a>
-<a href="#matematizacion">Matematización</a>
-<a href="#reto">Reto</a>
+
+<a href="#intro">Introducción</a>
+<a href="#energia">Energía Mecánica</a>
+<a href="#experimentos">Experimentos</a>
+<a href="#fenomenos">Fenómenos</a>
+<a href="#formulas">Fórmulas</a>
+<a href="#galeria">Galería</a>
+
 </nav>
 
-<!-- CONTEXTO -->
+<!-- INTRO -->
 
-<section id="cotidiano">
+<section id="intro">
 
-<div class="container">
-
-<h2>
-La energía mecánica en nuestra vida diaria
-</h2>
-
-<p>
-Cuando una bicicleta desciende por una pendiente, cuando un niño se balancea en un columpio o cuando una resortera impulsa un objeto, observamos fenómenos relacionados con la energía mecánica.
-</p>
-
-<p>
-Antes de estudiar fórmulas, observaremos situaciones reales para construir explicaciones sobre lo que sucede.
-</p>
-
-</div>
-
-</section>
-
-<!-- PREGUNTAS INICIALES -->
-
-<section id="preguntas" class="blue">
-
-<div class="container">
-
-<h2>
-¿Qué crees que sucederá?
-</h2>
-
-<div class="grid">
-
-<div class="card">
-<div class="card-content">
-
-<h3>🚗 Carro</h3>
-
-<ul>
-<li>¿Llegará más rápido desde una mayor altura?</li>
-<li>¿Por qué aumenta su velocidad?</li>
-<li>¿Qué sucede con la energía?</li>
-</ul>
-
-</div>
-</div>
-
-<div class="card">
-<div class="card-content">
-
-<h3>🏹 Catapulta</h3>
-
-<ul>
-<li>¿Qué ocurre si se estira más la banda?</li>
-<li>¿Aumenta el alcance?</li>
-<li>¿Dónde se almacena la energía?</li>
-</ul>
-
-</div>
-</div>
-
-<div class="card">
-<div class="card-content">
-
-<h3>⏱️ Péndulo</h3>
-
-<ul>
-<li>¿Dónde tiene más energía?</li>
-<li>¿Qué ocurre si aumenta la longitud?</li>
-<li>¿Por qué sigue oscilando?</li>
-</ul>
-
-</div>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- CONCEPTO -->
-
-<section id="concepto">
-
-<div class="container">
+<div class="container intro">
 
 <h2>
 ¿Qué es la energía mecánica?
 </h2>
 
 <p>
-La energía mecánica representa la capacidad de un sistema para producir movimiento o realizar trabajo. Se manifiesta principalmente como energía potencial, asociada a la posición o deformación de un objeto, y energía cinética, asociada al movimiento.
-</p>
 
-<p>
-A lo largo de esta exploración observaremos cómo la energía cambia continuamente entre estas formas.
+La energía mecánica corresponde a la suma entre la energía potencial y la energía cinética.
+Esta energía se encuentra presente en fenómenos relacionados con movimiento, gravedad,
+elasticidad, velocidad y conservación de energía.
+
 </p>
 
 </div>
 
 </section>
 
-<!-- MAPA CONCEPTUAL -->
+<!-- ENERGIA -->
 
-<section class="blue">
+<section id="energia" class="blue">
 
 <div class="container">
 
 <h2>
-Relación entre los conceptos
+Uso de la energía mecánica
 </h2>
 
 <div class="grid">
 
 <div class="card">
+
 <div class="card-content">
 
-<h3>Energía Mecánica</h3>
+<h3>
+Movimiento
+</h3>
 
 <p>
-Energía total del sistema.
+La energía mecánica permite generar desplazamiento y velocidad en sistemas físicos.
 </p>
 
 </div>
+
 </div>
 
 <div class="card">
+
 <div class="card-content">
 
-<h3>Energía Potencial</h3>
+<h3>
+Transformación
+</h3>
 
 <p>
-Asociada a la posición o deformación.
+La energía cambia constantemente entre energía potencial, cinética y elástica.
 </p>
 
 </div>
+
 </div>
 
 <div class="card">
+
 <div class="card-content">
 
-<h3>Energía Cinética</h3>
+<h3>
+Conservación
+</h3>
 
 <p>
-Asociada al movimiento.
+La energía no desaparece; únicamente se transforma entre diferentes formas.
 </p>
 
 </div>
+
 </div>
 
 </div>
@@ -185,210 +397,103 @@ Asociada al movimiento.
 </div>
 
 </section>
+
+<!-- EXPERIMENTOS -->
+
+<section id="experimentos">
+
+<div class="container">
+
+<h2>
+Experimentos
+</h2>
+
+<div class="grid">
 
 <!-- CARRO -->
 
-<section id="carro">
-
-<div class="container">
-
-<h2>
-🚗 ¿Por qué se mueve el carro?
-</h2>
-
 <div class="card">
+
+<img src="https://i.ibb.co/s9xbQYXC/carro.jpg">
 
 <div class="card-content">
 
-<h3>Situación problema</h3>
+<h3>
+🚗 Carro por Rampa
+</h3>
 
 <p>
-Dos carros idénticos parten desde diferentes alturas en una rampa.
+Transformación de energía potencial gravitacional en energía cinética mediante una rampa inclinada.
 </p>
 
-<p>
-¿Cuál llegará más rápido al final? Justifica tu respuesta.
-</p>
-
-<h3>Actividad</h3>
-
 <ul>
-<li>Formula una hipótesis.</li>
-<li>Realiza pruebas.</li>
-<li>Mide tiempos.</li>
-<li>Compara resultados.</li>
-<li>Explica lo observado.</li>
-</ul>
 
-<h3>Registro de datos</h3>
+<li>Energía potencial gravitacional</li>
+<li>Energía cinética</li>
+<li>Aceleración</li>
+<li>Movimiento rectilíneo</li>
 
-<table style="width:100%;border-collapse:collapse;">
-<tr>
-<th>Altura</th>
-<th>Tiempo</th>
-<th>Observaciones</th>
-</tr>
-<tr>
-<td>20 cm</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>40 cm</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>60 cm</td>
-<td></td>
-<td></td>
-</tr>
-</table>
-
-<h3>Discusión</h3>
-
-<ul>
-<li>¿Todos obtuvieron el mismo resultado?</li>
-<li>¿Influye la fricción?</li>
-<li>¿Qué relación existe entre altura y velocidad?</li>
 </ul>
 
 </div>
 
 </div>
-
-</div>
-
-</section>
 
 <!-- CATAPULTA -->
 
-<section id="catapulta" class="blue">
-
-<div class="container">
-
-<h2>
-🏹 ¿Cómo almacena energía una catapulta?
-</h2>
-
 <div class="card">
+
+<img src="https://i.ibb.co/x85QNd77/catapulta.jpg">
 
 <div class="card-content">
 
-<h3>Situación problema</h3>
+<h3>
+🏹 Catapulta Elástica
+</h3>
 
 <p>
-¿Qué sucede cuando aumentamos el estiramiento de la banda elástica?
+Uso de energía potencial elástica para impulsar proyectiles mediante bandas elásticas.
 </p>
 
-<h3>Actividad</h3>
-
 <ul>
-<li>Predice.</li>
-<li>Lanza varias veces.</li>
-<li>Compara distancias.</li>
-<li>Busca patrones.</li>
-</ul>
 
-<h3>Registro de datos</h3>
+<li>Energía elástica</li>
+<li>Impulso</li>
+<li>Movimiento parabólico</li>
+<li>Elasticidad</li>
 
-<table style="width:100%;border-collapse:collapse;">
-<tr>
-<th>Estiramiento</th>
-<th>Distancia</th>
-<th>Observaciones</th>
-</tr>
-<tr>
-<td>5 cm</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>10 cm</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>15 cm</td>
-<td></td>
-<td></td>
-</tr>
-</table>
-
-<h3>Discusión</h3>
-
-<ul>
-<li>¿Existe una relación entre estiramiento y alcance?</li>
-<li>¿Toda la energía se transforma en movimiento?</li>
 </ul>
 
 </div>
 
 </div>
 
-</div>
-
-</section>
-
-<!-- PÉNDULO -->
-
-<section id="pendulo">
-
-<div class="container">
-
-<h2>
-⏱️ ¿Cómo intercambia energía un péndulo?
-</h2>
+<!-- PENDULO -->
 
 <div class="card">
 
+<img src="https://i.ibb.co/8L9NjV5X/pendulo.jpg">
+
 <div class="card-content">
 
-<h3>Situación problema</h3>
+<h3>
+⏱️ Péndulo Mecánico
+</h3>
 
 <p>
-Observa un péndulo durante varias oscilaciones.
+Intercambio constante entre energía potencial gravitacional y energía cinética.
 </p>
 
-<h3>Preguntas</h3>
-
 <ul>
-<li>¿Dónde tiene más velocidad?</li>
-<li>¿Dónde tiene más altura?</li>
-<li>¿Qué ocurre si aumenta la longitud?</li>
+
+<li>Oscilación</li>
+<li>Conservación de energía</li>
+<li>Movimiento periódico</li>
+<li>Gravedad</li>
+
 </ul>
 
-<h3>Registro de datos</h3>
-
-<table style="width:100%;border-collapse:collapse;">
-<tr>
-<th>Longitud</th>
-<th>Tiempo de 10 oscilaciones</th>
-<th>Observaciones</th>
-</tr>
-<tr>
-<td>20 cm</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>40 cm</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>60 cm</td>
-<td></td>
-<td></td>
-</tr>
-</table>
-
-<h3>Discusión</h3>
-
-<ul>
-<li>¿Qué energía predomina en los extremos?</li>
-<li>¿Qué energía predomina en el centro?</li>
-</ul>
+</div>
 
 </div>
 
@@ -398,74 +503,64 @@ Observa un péndulo durante varias oscilaciones.
 
 </section>
 
-<!-- RELACIÓN -->
+<!-- FENOMENOS -->
 
-<section id="conexion" class="dark">
-
-<div class="container">
-
-<h2>
-¿Qué tienen en común estos experimentos?
-</h2>
-
-<p>
-Aunque los tres sistemas son diferentes, todos muestran la conservación y transformación de la energía.
-</p>
-
-<p>
-En el carro predomina la energía gravitacional, en la catapulta la energía elástica y en el péndulo existe un intercambio continuo entre energía potencial y cinética.
-</p>
-
-</div>
-
-</section>
-
-<!-- MATEMATIZACIÓN -->
-
-<section id="matematizacion">
+<section id="fenomenos" class="dark">
 
 <div class="container">
 
 <h2>
-De la observación a las matemáticas
+Fenómenos físicos observados
 </h2>
-
-<p>
-Después de observar patrones en los datos, utilizamos modelos matemáticos para describir los fenómenos.
-</p>
 
 <div class="grid">
 
 <div class="card">
+
 <div class="card-content">
-<h3>Energía Potencial</h3>
-<p>Ep = mgh</p>
-<p>Representa la energía asociada a la altura.</p>
+
+<h3>
+Fricción
+</h3>
+
+<p>
+Parte de la energía se pierde debido al contacto entre superficies.
+</p>
+
 </div>
+
 </div>
 
 <div class="card">
+
 <div class="card-content">
-<h3>Energía Cinética</h3>
-<p>Ec = ½mv²</p>
-<p>Representa la energía asociada al movimiento.</p>
+
+<h3>
+Elasticidad
+</h3>
+
+<p>
+Los materiales almacenan energía y posteriormente la liberan.
+</p>
+
 </div>
+
 </div>
 
 <div class="card">
+
 <div class="card-content">
-<h3>Energía Elástica</h3>
-<p>Ee = ½kx²</p>
-<p>Representa la energía almacenada en una deformación.</p>
-</div>
+
+<h3>
+Gravedad
+</h3>
+
+<p>
+La gravedad transforma energía potencial en energía cinética.
+</p>
+
 </div>
 
-<div class="card">
-<div class="card-content">
-<h3>Péndulo</h3>
-<p>T = 2π√(L/g)</p>
-<p>Relaciona la longitud con el período.</p>
-</div>
 </div>
 
 </div>
@@ -474,44 +569,67 @@ Después de observar patrones en los datos, utilizamos modelos matemáticos para
 
 </section>
 
-<!-- RETO -->
+<!-- FORMULAS -->
 
-<section id="reto" class="blue">
+<section id="formulas">
 
 <div class="container">
 
 <h2>
-Reto para el visitante
+Fórmulas utilizadas
 </h2>
 
-<p>
-Identifica una situación de tu vida cotidiana donde ocurra una transformación de energía mecánica.
-</p>
+<div class="formulas">
 
-<ul>
-<li>Describe la situación.</li>
-<li>Identifica las formas de energía.</li>
-<li>Explica las transformaciones observadas.</li>
-<li>Representa el fenómeno mediante un dibujo o esquema.</li>
-</ul>
+<div class="formula">
+Ec = 1/2 mv²
+</div>
+
+<div class="formula">
+Ep = mgh
+</div>
+
+<div class="formula">
+Ee = 1/2 kx²
+</div>
+
+<div class="formula">
+Em = Ec + Ep
+</div>
+
+<div class="formula">
+v = d/t
+</div>
+
+<div class="formula">
+T = 2π√(L/g)
+</div>
+
+</div>
 
 </div>
 
 </section>
 
-<!-- CONCLUSIÓN -->
+<!-- GALERIA -->
 
-<section>
+<section id="galeria" class="blue">
 
 <div class="container">
 
 <h2>
-Conclusión
+Galería del proyecto
 </h2>
 
-<p>
-La física no consiste únicamente en aplicar ecuaciones. A través de preguntas, observaciones, mediciones y argumentaciones es posible construir explicaciones sobre los fenómenos naturales y comprender cómo la energía se transforma y conserva en distintos sistemas.
-</p>
+<div class="gallery">
+
+<img src="https://i.ibb.co/s9xbQYXC/carro.jpg">
+
+<img src="https://i.ibb.co/x85QNd77/catapulta.jpg">
+
+<img src="https://i.ibb.co/8L9NjV5X/pendulo.jpg">
+
+</div>
 
 </div>
 
@@ -526,16 +644,11 @@ Universidad Distrital Francisco José de Caldas
 </h3>
 
 <p>
-Proyecto Experimental de Mecánica
+Proyecto Experimental de Física
 </p>
 
 <p>
-Integrante:
-Leyder William Vargas Jiménez
-</p>
-
-<p>
-2026
+Energía Mecánica y Conservación de la Energía
 </p>
 
 </footer>
@@ -543,5 +656,3 @@ Leyder William Vargas Jiménez
 </body>
 
 </html>
-
-```
